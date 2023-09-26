@@ -1,5 +1,6 @@
 :root {
   --responsiveUnit: calc(1vmin + 1vmax);
+  --windowOrientation: landscape;
 
   --text: #ffffff;
   --wall: #000000;
@@ -39,6 +40,10 @@ h2 {
 }
 
 @media (orientation: portrait) {
+  :root {
+    --windowOrientation: portrait;
+  }
+
   h1 {
     font-size: calc(var(--responsiveUnit) * 4);
   }
@@ -46,4 +51,14 @@ h2 {
   h2 {
     font-size: calc(var(--responsiveUnit) * 3);
   }
+}
+
+#CSS-responsive {
+  font-size: calc(var(--responsiveUnit) * 1);
+  margin: 0;
+}
+
+#CSS-debug {
+  font-size: calc(var(--responsiveUnit) * 3);
+  margin: 0;
 }

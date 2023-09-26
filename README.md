@@ -1,2 +1,2 @@
-# [template-web](https://github.com/dudushy/template-web/)
-Template for Web projects.
+# [responsive](https://github.com/dudushy/responsive/)
+Trying to make a responsive unit.
