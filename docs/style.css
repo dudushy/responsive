@@ -59,6 +59,6 @@ h2 {
 }
 
 #CSS-debug {
-  font-size: calc(var(--responsiveUnit) * 3);
+  font-size: calc(var(--responsiveUnit) * 1.5);
   margin: 0;
 }

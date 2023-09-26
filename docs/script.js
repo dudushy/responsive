@@ -51,5 +51,5 @@ function updateRootStyles() {
 
   if (!debugElement) return;
 
-  debugElement.innerHTML = `[${elementWindowWidth}, ${elementWindowHeight}] - ${elementOrientation} (${elementResponsiveUnit}) <b>${elementFontSize}</b>`;
+  debugElement.innerHTML = `wh[${elementWindowWidth}, ${elementWindowHeight}] - ${elementOrientation} <br>${elementResponsiveUnit} <br><b>${elementFontSize}</b>`;
 }
