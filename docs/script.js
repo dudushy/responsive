@@ -14,10 +14,10 @@ function updateRootStyles() {
   console.log(`[${TITLE}#updateRootStyles] root`, root);
   console.log(`[${TITLE}#updateRootStyles] root.style`, root.style);
 
-  const windowWidth = window.innerWidth;
+  const windowWidth = Math.min(window.innerWidth, document.documentElement.clientWidth);
   console.log(`[${TITLE}#updateRootStyles] windowWidth`, windowWidth);
 
-  const windowHeight = window.innerHeight;
+  const windowHeight = Math.min(window.innerHeight, document.documentElement.clientHeight);
   console.log(`[${TITLE}#updateRootStyles] windowHeight`, windowHeight);
 
   root.style.setProperty('--windowWidth', `${windowWidth}px`);
@@ -46,10 +46,16 @@ function updateRootStyles() {
   const elementResponsiveUnit = computedStyle.getPropertyValue('--responsiveUnit');
   console.log(`[${TITLE}#updateRootStyles] elementResponsiveUnit`, elementResponsiveUnit);
 
+  const elementOrientationMax = computedStyle.getPropertyValue('--orientationMax');
+  console.log(`[${TITLE}#updateRootStyles] elementOrientationMax`, elementOrientationMax);
+
+  const elementOrientationMin = computedStyle.getPropertyValue('--orientationMin');
+  console.log(`[${TITLE}#updateRootStyles] elementOrientationMin`, elementOrientationMin);
+
   const debugElement = document.getElementById('CSS-debug');
   console.log(`[${TITLE}#updateRootStyles] debugElement`, debugElement);
 
   if (!debugElement) return;
 
-  debugElement.innerHTML = `wh[${elementWindowWidth}, ${elementWindowHeight}] - ${elementOrientation} <br>${elementResponsiveUnit} <br><b>${elementFontSize}</b>`;
+  debugElement.innerHTML = `wh[${elementWindowWidth}, ${elementWindowHeight}] - ${elementOrientation} <br>max ${elementOrientationMax} | min ${elementOrientationMin} <br>${elementResponsiveUnit} <br><b>${elementFontSize}</b>`;
 }

@@ -1,5 +1,7 @@
 :root {
   --responsiveUnit: calc(1vmin + 1vmax);
+  --orientationMax: 1vw;
+  --orientationMin: 1vh;
   --windowOrientation: landscape;
 
   --text: #ffffff;
@@ -41,6 +43,8 @@ h2 {
 
 @media (orientation: portrait) {
   :root {
+    --orientationMax: 1vh;
+    --orientationMin: 1vw;
     --windowOrientation: portrait;
   }
 
